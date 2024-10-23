@@ -24,9 +24,9 @@ An extension of the work done in [Part I](https://github.com/Weetynn/housingdata
 
 ### 2.0 Data Preprocessing
 
-#### 📌 Attribute Data Type Corrections & Renaming of Attributes
+#### 📌 Attribute Data Type Corrections, Year Data Extraction & Renaming of Attributes
 
-Four attributes were corrected for their data types:
+Four attributes were corrected:
 
     ▪️ "bathrooms" was initially categorized as a character data type and was converted to numeric.
     
@@ -56,7 +56,13 @@ Missing values were handled through imputation:
     
     ▪️ As a result, the observation with the outlier was ultimately removed from the dataset to maintain data integrity.
 
+---
 
+### 3.0 Exploratory Data Analysis (EDA)
+
+#### 📌 Attribute Data Type Corrections, Year Data Extraction & Renaming of Attributes
+
+Four attributes were corrected:
 
 
 
