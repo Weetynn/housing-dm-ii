@@ -99,12 +99,36 @@ Missing values were handled through imputation:
     ▪️ Lat and Long: Homes were clustered around coordinates (47.56, -122.21).
     
     ▪️ Neighboring Homes: The average neighboring living area was 1983 sqft, with lot sizes averaging 12,465 sqft.
+    
 
 #### 📌 Missing Value Check
 
 ![Screenshot 2024-10-23 180455](https://github.com/user-attachments/assets/43acdeea-f260-429f-bbab-711c720fadf3)
 
-▪️ Ensured that no missing values remained in the dataset post-imputation and cleaning steps.
+    ▪️ Ensured that no missing values remained in the dataset post-imputation and cleaning steps.
+
+
+#### 📌 Univariate Visualizations
+
+    ▪️ Created individual bar plots for ordinal and variables. 
+    
+    ▪️ Findings from the bar plots: Most homes lacked a waterfront view, had not been renovated, and received low view ratings. They were generally in moderate condition (rated 3) with a grade of 7. Most had 3 bedrooms and 2.5 bathrooms.
+
+
+#### 📌 Continuous Variables Visualization
+
+    ▪️ Plotted histograms for continuous variables. 
+    
+    ▪️ Observations showed that these variables were positively skewed, indicating that high-value houses and large properties were relatively rare.
+
+    ▪️ Analysis of latitude and longitude variables revealed clustering of homes within specific geographical bands, possibly indicating denser neighborhoods.
+
+#### 📌 Bivariate Relationships
+
+    ▪️ Used scatterplots to examine potential relationships between key attributes.  
+    
+    ▪️ Findings are: Larger homes, more bathrooms, and higher view ratings were positively correlated with higher prices. Newer homes and those in neighborhoods with larger living spaces also tended to have higher prices. Lot size showed a mild positive relationship, while bedroom count had a mixed impact on prices.
+
 
 
 
