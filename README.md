@@ -6,7 +6,9 @@ An extension of the work done in [Part I](https://github.com/Weetynn/housingdata
 
 ## 🗒️ Main Areas of Discussion
 
-#### 📌 Related Work
+### 1.0 Related Work
+
+#### 📌 Literature Review
 
     ▪️ The literature review examines key factors influencing real estate prices, focusing on both internal and external factors.
     
@@ -17,6 +19,36 @@ An extension of the work done in [Part I](https://github.com/Weetynn/housingdata
     ▪️ Previous studies are referenced to highlight how housing attributes affect property prices.
     
     ▪️ The findings from the literature are used as benchmarks for validating the hypothesis testing results in this report.
+
+---
+
+### 2.0 Data Preprocessing
+
+#### 📌 Attribute Data Type Corrections & Renaming of Attributes
+
+Four attributes were corrected for their data types:
+
+    ▪️ "bathrooms" was initially categorized as a character data type and was converted to numeric.
+    
+    ▪️ "bedrooms" was also incorrectly categorized as character and changed to numeric.
+    
+    ▪️ "yr_renovated" was originally a numeric type but was transformed into a binary indicator (0 for no renovation, 1 for renovated) and renamed to "renovation" for better clarity.
+    
+    ▪️ "date" was originally recorded in a string format and was processed to extract the year, creating a new numeric attribute, "year_of_sale."
+  
+#### 📌 Handling Missing Values
+
+Missing values were handled through imputation:
+
+    ▪️ Categorical variables: "waterfront", "bedrooms", "bathrooms", "floors", "view", "grade", "condition", "yr_built", "renovation", and "year_of_sale". 
+    
+    ▪️ Continuous variables: "price," "sqft_living," "sqft_lot," "sqft_above," "sqft_basement," "lat," "long," "sqft_living15," and "sqft_lot15," were imputed using their median given the skewness of their distributions.
+    
+ 
+  
+
+Categorical attributes like "bathrooms" and "bedrooms" had missing values filled using the mode (e.g., most houses had 2 bathrooms and 3 bedrooms).
+Continuous variables like "sqft_living" and "sqft_lot" were imputed based on their distribution, using the median or mean depending on skewness.
 
 
 
