@@ -44,11 +44,20 @@ Missing values were handled through imputation:
     
     ▪️ Continuous variables: "price," "sqft_living," "sqft_lot," "sqft_above," "sqft_basement," "lat," "long," "sqft_living15," and "sqft_lot15," were imputed using their median given the skewness of their distributions.
     
- 
-  
+#### 📌 Inconsistency Resolution
 
-Categorical attributes like "bathrooms" and "bedrooms" had missing values filled using the mode (e.g., most houses had 2 bathrooms and 3 bedrooms).
-Continuous variables like "sqft_living" and "sqft_lot" were imputed based on their distribution, using the median or mean depending on skewness.
+    ▪️ "bedrooms" values of 0 were replaced with the mode (3 bedrooms).
+
+#### 📌 Outlier Treatment
+
+    ▪️ The "sqft_lot" outlier was adjusted by calculating the average ratio between "sqft_lot" and "sqft_lot15" (the average lot size of the 15 nearest neighbors).
+    
+    ▪️ This ratio was then used to impute a more reasonable value, reducing the outlier from 533,610 to approximately 254,996. However, this new value was still too large, given the small interior living space of 800 sqft.
+    
+    ▪️ As a result, the observation with the outlier was ultimately removed from the dataset to maintain data integrity.
+
+
+
 
 
 
