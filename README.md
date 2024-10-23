@@ -155,17 +155,36 @@ Missing values were handled through imputation:
 
 #### 📌 Outlier Detection for Created Features
 
-    ▪️ Detected outliers for newly created features like "house_age" and "bed_bath_ratio".
+    ▪️ Detect outliers for newly created features namely "house_age", "bed_bath_ratio", and "lot_utilization".
 
     ▪️ No outliers were found for "house_age," while the outliers in "bed_bath_ratio" were deemed genuine after validating against the "sqft_living" data.
 
+    ▪️ For "lot_utilization," a significant number of outliers were observed. Some outliers were impractical, with lot_utilization values above 1, implying that the interior living space exceeded the lot size, which is unrealistic.
+
+    ▪️ Identified all observations where "sqft_living" was greater than "sqft_lot." A new column called "living_lot_diff" was created to store the difference between these values.
+
+    ▪️ Displayed the problematic observations and successfully removed them from the dataset. After this, no such observations remained in the dataset.
+
+
 #### 📌 Transformation
 
-    ▪️ Performed logarithmic transformations on skewed continuous variables to normalize their distributions. Variables like "sqft_lot," "price," "sqft_basement," "sqft_living," and "lot_utilization" were log-transformed.
+    ▪️ Performed logarithmic transformations on skewed continuous variables to normalize their distributions. 
+    
+    ▪️ Variables namely "sqft_lot", "sqft_lot15", "price", "sqft_basement", "bed_bath_ratio", "sqft_above", "sqft_living", "lot_utilization", and "sqft_living15".were log-transformed.
 
     ▪️ The transformed variables helped correct the positive skewness present in the raw data, making the features more suitable for predictive modeling.
 
 
+#### 📌 Scaling
+
+    ▪️ Standardized continuous variables namely "lat", "long", "log_bed_bath_ratio", "house_age", "log_sqft_lot", "log_sqft_lot15", "log_sqft_above", "log_sqft_basement", "log_sqft_living", "log_sqft_living15", and "log_lot_ultization" by scaling them to have a mean of 0 and a standard deviation of 1. This ensures that variables are on a comparable scale for modeling.
+
+
+#### 📌 One-Hot Encoding
+
+    ▪️ Applied one-hot encoding to categorical variables namely "view" to transform them into binary indicators for each category,  and these were stored in the new dataset, "house_transformed_with_dummies".
+
+    ▪️ This encoding is crucial for variables with non-numeric categories that needed to be included in regression models
 
 
 
