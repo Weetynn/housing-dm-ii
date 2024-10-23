@@ -119,9 +119,8 @@ Missing values were handled through imputation:
 
     ▪️ Plotted histograms for continuous variables. 
     
-    ▪️ Observations showed that these variables were positively skewed, indicating that high-value houses and large properties were relatively rare.
+    ▪️ Findings are: Observations showed that these variables were positively skewed, indicating that high-value houses and large properties were relatively rare. Analysis of latitude and longitude variables revealed clustering of homes within specific geographical bands, possibly indicating denser neighborhoods.
 
-    ▪️ Analysis of latitude and longitude variables revealed clustering of homes within specific geographical bands, possibly indicating denser neighborhoods.
 
 #### 📌 Bivariate Relationships
 
@@ -129,6 +128,12 @@ Missing values were handled through imputation:
     
     ▪️ Findings are: Larger homes, more bathrooms, and higher view ratings were positively correlated with higher prices. Newer homes and those in neighborhoods with larger living spaces also tended to have higher prices. Lot size showed a mild positive relationship, while bedroom count had a mixed impact on prices.
 
+
+#### 📌 Correlation Analysis
+
+    ▪️ Computed correlations for all continuous and ordinal variables.
+    
+    ▪️ Findings are: A strong positive correlation was observed between "price" and "sqft_living" (0.7 or higher). Moderate correlations were found between "price" and other variables like "bathrooms," "view," and "sqft_living15," suggesting that these factors contribute to price but are not as strongly correlated as living space.
 
 
 
