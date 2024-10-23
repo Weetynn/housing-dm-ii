@@ -136,6 +136,9 @@ Missing values were handled through imputation:
     ▪️ Findings are: A strong positive correlation was observed between "price" and "sqft_living" (0.7 or higher). Moderate correlations were found between "price" and other variables like "bathrooms," "view," and "sqft_living15," suggesting that these factors contribute to price but are not as strongly correlated as living space.
 
 
+### 4.0 Feature Enginering
+
+#### 📌 Metadata Inspection
 
 
 
