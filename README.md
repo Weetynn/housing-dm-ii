@@ -190,6 +190,8 @@ Missing values were handled through imputation:
 
 ### 🔶 5.0 Hypothesis Testing
 
+    All hypothesis tests were performed with a significance level (α) of 0.05.
+
 #### 📌 Hypothesis 1: House Age and Price
 
     ▪️ Hypothesis: Older houses tend to have lower prices.
