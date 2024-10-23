@@ -135,6 +135,7 @@ Missing values were handled through imputation:
     
     ▪️ Findings are: A strong positive correlation was observed between "price" and "sqft_living" (0.7 or higher). Moderate correlations were found between "price" and other variables like "bathrooms," "view," and "sqft_living15," suggesting that these factors contribute to price but are not as strongly correlated as living space.
 
+---
 
 ### 4.0 Feature Enginering
 
@@ -157,6 +158,14 @@ Missing values were handled through imputation:
     ▪️ Detected outliers for newly created features like "house_age" and "bed_bath_ratio".
 
     ▪️ No outliers were found for "house_age," while the outliers in "bed_bath_ratio" were deemed genuine after validating against the "sqft_living" data.
+
+#### 📌 Transformation
+
+    ▪️ Performed logarithmic transformations on skewed continuous variables to normalize their distributions. Variables like "sqft_lot," "price," "sqft_basement," "sqft_living," and "lot_utilization" were log-transformed.
+
+    ▪️ The transformed variables helped correct the positive skewness present in the raw data, making the features more suitable for predictive modeling.
+
+
 
 
 
