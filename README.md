@@ -6,7 +6,7 @@ An extension of the work done in [Part I](https://github.com/Weetynn/housingdata
 
 ## 🗒️ Main Areas of Discussion
 
-### 1.0 Related Work
+###  1.0 Related Work
 
 #### 📌 Literature Review
 
@@ -22,7 +22,7 @@ An extension of the work done in [Part I](https://github.com/Weetynn/housingdata
 
 ---
 
-### 2.0 Data Preprocessing
+###  2.0 Data Preprocessing
 
 #### 📌 Attribute Data Type Corrections, Year Data Extraction & Renaming of Attributes
 
@@ -66,7 +66,7 @@ Missing values were handled through imputation:
 
 ---
 
-### 3.0 Exploratory Data Analysis (EDA)
+###  3.0 Exploratory Data Analysis (EDA)
 
 #### 📌 Metadata Inspection
 
@@ -137,7 +137,7 @@ Missing values were handled through imputation:
 
 ---
 
-### 4.0 Feature Enginering
+###  4.0 Feature Enginering
 
 #### 📌 Date Extraction
 
@@ -185,6 +185,66 @@ Missing values were handled through imputation:
     ▪️ Applied one-hot encoding to categorical variables namely "view" to transform them into binary indicators for each category,  and these were stored in the new dataset, "house_transformed_with_dummies".
 
     ▪️ This encoding is crucial for variables with non-numeric categories that needed to be included in regression models
+
+---
+
+### 🔶 5.0 Hypothesis Testing
+
+#### 📌 Hypothesis 1: House Age and Price
+
+    ▪️ Hypothesis: Older houses tend to have lower prices.
+    
+    ▪️ Test Method: Linear regression was performed to examine the relationship between "house_age" and "price."
+    
+    ▪️ Result: A statistically significant negative relationship was found, indicating that as house age increases, prices tend to decrease.
+
+
+#### 📌 Hypothesis 2: Neighborhood Living Space and Price
+
+    ▪️ Hypothesis: Houses in neighborhoods with larger living spaces tend to have higher prices.
+    
+    ▪️ Test Method: A regression model was used to test the relationship between "sqft_living15" (average living space of nearby homes) and "price."
+    
+    ▪️ Result: The analysis revealed a positive correlation, suggesting that homes in neighborhoods with larger houses are priced higher.
+
+
+#### 📌 Hypothesis 3: Bedroom-to-Bathroom Ratio and Price
+
+    ▪️ Hypothesis: Higher bedroom-to-bathroom ratios result in lower prices.
+    
+    ▪️ Test Method: Linear regression was used to examine the impact of the "bed_bath_ratio" on "price."
+    
+    ▪️ Result: A negative relationship was found, indicating that homes with more bedrooms per bathroom tend to have lower prices.
+
+
+#### 📌 Hypothesis 3: Bedroom-to-Bathroom Ratio and Price
+
+    ▪️ Hypothesis: Higher bedroom-to-bathroom ratios result in lower prices.
+    
+    ▪️ Test Method: Linear regression was used to examine the impact of the "bed_bath_ratio" on "price."
+    
+    ▪️ Result: A negative relationship was found, indicating that homes with more bedrooms per bathroom tend to have lower prices.
+
+
+#### 📌 Hypothesis 4: Lot Utilization and Price
+
+    ▪️ Hypothesis: Houses with higher lot utilization (i.e., more interior living space relative to lot size) are priced higher.
+    
+    ▪️ Test Method: A regression model tested the relationship between "lot_utilization" and "price."
+    
+    ▪️ Result: A positive correlation was observed, supporting the hypothesis that homes making better use of their lot space are priced higher.
+
+
+#### 📌 Hypothesis 5: View Rating and Price
+
+    ▪️ Hypothesis: Houses with better view ratings have significantly higher prices.
+    
+    ▪️ Test Method: ANOVA was used to compare average log-transformed prices across different view ratings using dummy variables created for each view category.
+    
+    ▪️ Result: The analysis showed that homes with higher view ratings were priced significantly higher than those with lower or no view ratings.
+
+
+
 
 
 
