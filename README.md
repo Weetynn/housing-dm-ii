@@ -35,7 +35,18 @@ Four attributes were corrected:
     ▪️ "yr_renovated" was originally a numeric type but was transformed into a binary indicator (0 for no renovation, 1 for renovated) and renamed to "renovation" for better clarity.
     
     ▪️ "date" was originally recorded in a string format and was processed to extract the year, creating a new numeric attribute, "year_of_sale."
+    
   
+#### 📌 Inconsistency Resolution
+
+    ▪️ "bedrooms" values of 0 were replaced with the mode (3 bedrooms).
+    
+
+#### 📌 Creation of the "house_updated" Dataset
+
+    ▪️ A new dataset called "house_updated" was created by dropping the "id" attribute, as it lacked meaningful information. The "zipcode" attribute was also removed due to its limited explanatory and predictive power.  Instead, the geographical attributes "lat" (latitude) and "long" (longitude) were retained, as they provided more useful information.
+
+
 #### 📌 Handling Missing Values
 
 Missing values were handled through imputation:
@@ -44,9 +55,6 @@ Missing values were handled through imputation:
     
     ▪️ Continuous variables: "price," "sqft_living," "sqft_lot," "sqft_above," "sqft_basement," "lat," "long," "sqft_living15," and "sqft_lot15," were imputed using their median given the skewness of their distributions.
     
-#### 📌 Inconsistency Resolution
-
-    ▪️ "bedrooms" values of 0 were replaced with the mode (3 bedrooms).
 
 #### 📌 Outlier Treatment
 
@@ -60,10 +68,15 @@ Missing values were handled through imputation:
 
 ### 3.0 Exploratory Data Analysis (EDA)
 
-#### 📌 Attribute Data Type Corrections, Year Data Extraction & Renaming of Attributes
+#### 📌 Metadata Inspection
 
-Four attributes were corrected:
+▪️ The "sqft_lot" outlier was adjusted by calculating the average ratio between "sqft_lot" and "sqft_lot15" (the average lot size of the 15 nearest neighbors).
 
+▪️ The "sqft_lot" outlier was adjusted by calculating the average ratio between "sqft_lot" and "sqft_lot15" (the average lot size of the 15 nearest neighbors).
+    
+▪️ This ratio was then used to impute a more reasonable value, reducing the outlier from 533,610 to approximately 254,996. However, this new value was still too large, given the small interior living space of 800 sqft.
+    
+▪️ As a result, the observation with the outlier was ultimately removed from the dataset to maintain data integrity.
 
 
 
