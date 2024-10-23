@@ -70,13 +70,44 @@ Missing values were handled through imputation:
 
 #### 📌 Metadata Inspection
 
-▪️ The "sqft_lot" outlier was adjusted by calculating the average ratio between "sqft_lot" and "sqft_lot15" (the average lot size of the 15 nearest neighbors).
+![Screenshot 2024-10-23 175528](https://github.com/user-attachments/assets/d81ad2e1-4174-4173-92ff-7ebda1fedcea)
+    
+    ▪️ Reviewed the dataset’s structure after data pre-processing, confirming that it now contains 19 variables (after removing irrelevant ones) and that all variables are assigned the correct data types.
 
-▪️ The "sqft_lot" outlier was adjusted by calculating the average ratio between "sqft_lot" and "sqft_lot15" (the average lot size of the 15 nearest neighbors).
+#### 📌 Descriptive Statistics
+
+![Screenshot 2024-10-23 175817](https://github.com/user-attachments/assets/94a1aa6f-533b-4593-8cc5-b0f0335c0a3c)
+
+▪️ Generated summary statistics for all the 19 attributes. 
+
+▪️ Price: The average house price was $543,406, with wide variability.
     
-▪️ This ratio was then used to impute a more reasonable value, reducing the outlier from 533,610 to approximately 254,996. However, this new value was still too large, given the small interior living space of 800 sqft.
+▪️ Bedrooms and Bathrooms: Most homes had 3 bedrooms and 2 bathrooms, with means of 3.34 and 2.04, respectively.
     
-▪️ As a result, the observation with the outlier was ultimately removed from the dataset to maintain data integrity.
+▪️ Living and Lot Size: The average living area was 2061 sqft, and lot sizes varied significantly with a mean of 14,838 sqft.
+
+▪️ Floors: Most homes were single-storied, averaging 1.49 floors.
+    
+▪️ Waterfront and View: Few homes had waterfront access (mean near 0), and most had low or no view ratings (mean of 0.23).
+    
+▪️ Condition and Grade: Homes were in average condition (mean 3.41) with above-average grade (mean 7.65).
+
+▪️ Sqft Above and Basement: The average above-ground area was 1,771 sqft, and basements averaged 288.9 sqft.
+    
+▪️ Year Built and Renovation: The average build year was 1970, and most homes had not been renovated.
+
+▪️ Lat and Long: Homes were clustered around coordinates (47.56, -122.21).
+
+▪️ Neighboring Homes: The average neighboring living area was 1983 sqft, with lot sizes averaging 12,465 sqft.
+
+
+
+
+
+
+
+
+
 
 
 
