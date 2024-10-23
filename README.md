@@ -80,25 +80,13 @@ Missing values were handled through imputation:
 
     ▪️ Generated summary statistics for all the 19 attributes. 
     
-    ▪️ Price: The average house price was $543,406, with wide variability.
+    ▪️ The average house price was $543,406, with most homes having 3 bedrooms, 2 bathrooms, and a living area of 2061 sqft. Lot sizes averaged 14,838 sqft, and homes had an average of 1.49 floors.
         
-    ▪️ Bedrooms and Bathrooms: Most homes had 3 bedrooms and 2 bathrooms, with means of 3.34 and 2.04, respectively.
+    ▪️ Few homes had waterfront access or high view ratings. Most were in average condition (3.41) with above-average grade (7.65).
         
-    ▪️ Living and Lot Size: The average living area was 2061 sqft, and lot sizes varied significantly with a mean of 14,838 sqft.
+    ▪️ The average above-ground area was 1,771 sqft, and basements averaged 288.9 sqft. Most homes were built around 1970, with minimal renovations.
     
-    ▪️ Floors: Most homes were single-storied, averaging 1.49 floors.
-        
-    ▪️ Waterfront and View: Few homes had waterfront access (mean near 0), and most had low or no view ratings (mean of 0.23).
-        
-    ▪️ Condition and Grade: Homes were in average condition (mean 3.41) with above-average grade (mean 7.65).
-    
-    ▪️ Sqft Above and Basement: The average above-ground area was 1,771 sqft, and basements averaged 288.9 sqft.
-        
-    ▪️ Year Built and Renovation: The average build year was 1970, and most homes had not been renovated.
-    
-    ▪️ Lat and Long: Homes were clustered around coordinates (47.56, -122.21).
-    
-    ▪️ Neighboring Homes: The average neighboring living area was 1983 sqft, with lot sizes averaging 12,465 sqft.
+    ▪️ Properties were clustered near coordinates (47.56, -122.21), and neighboring homes averaged 1983 sqft of living space with 12,465 sqft lots.
     
 
 #### 📌 Missing Value Check
