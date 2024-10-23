@@ -138,7 +138,25 @@ Missing values were handled through imputation:
 
 ### 4.0 Feature Enginering
 
-#### 📌 Metadata Inspection
+#### 📌 Date Extraction
+
+   ▪️ Previously mentioned above. 
+   
+
+#### 📌 Feature Creation
+
+    ▪️ "house_age": Created by subtracting the "yr_built" from the "year_of_sale" to determine the age of each house at the time of sale.
+    
+    ▪️ "bed_bath_ratio": Calculated the ratio of bedrooms to bathrooms to assess the convenience of the layout (higher ratios indicating more bedrooms per bathroom).
+
+    ▪️ "lot_utilization": Created by dividing "sqft_living" by "sqft_lot" to measure how much of the available land was used for interior living space.
+
+
+#### 📌 Outlier Detection for Created Features
+
+    ▪️ Detected outliers for newly created features like "house_age" and "bed_bath_ratio".
+
+    ▪️ No outliers were found for "house_age," while the outliers in "bed_bath_ratio" were deemed genuine after validating against the "sqft_living" data.
 
 
 
