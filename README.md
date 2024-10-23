@@ -6,7 +6,7 @@ An extension of the work done in [Part I](https://github.com/Weetynn/housingdata
 
 ## 🗒️ Main Areas of Discussion
 
-###  1.0 Related Work
+### 1.0 Related Work
 
 #### 📌 Literature Review
 
@@ -247,7 +247,7 @@ Missing values were handled through imputation:
 
 ---
 
-### 6.0 Conclusion
+###  6.0 Conclusion
 
 #### 📌 Key Findings
 
