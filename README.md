@@ -188,7 +188,7 @@ Missing values were handled through imputation:
 
 ---
 
-### 🔶 5.0 Hypothesis Testing
+### 5.0 Hypothesis Testing
 
     All hypothesis tests were performed with a significance level (α) of 0.05.
 
@@ -245,11 +245,15 @@ Missing values were handled through imputation:
     
     ▪️ Result: The analysis showed that homes with higher view ratings were priced significantly higher than those with lower or no view ratings.
 
+---
 
+### 6.0 Conclusion
 
+#### 📌 Key Findings
 
-
-
+    ▪️ Confirmed negative relationship between house age and price and positive correlation between neighborhood living space and price.
+    
+    ▪️ Higher bed_bath_ratios reduced prices, while better lot utilization and higher view ratings increased property values.
 
 
 
