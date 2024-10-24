@@ -8,7 +8,7 @@ An extension of the work done in [Part I](https://github.com/Weetynn/housingdata
 
 ### 1.0 Related Work
 
-#### 📌 Literature Review
+#### 📌 1.1 Literature Review
 
     ▪️ The literature review examines key factors influencing real estate prices, focusing on both internal and external factors.
     
@@ -24,7 +24,7 @@ An extension of the work done in [Part I](https://github.com/Weetynn/housingdata
 
 ###  2.0 Data Preprocessing
 
-#### 📌 Attribute Data Type Corrections, Year Data Extraction & Renaming of Attributes
+#### 📌 2.1 Attribute Data Type Corrections, Year Data Extraction & Renaming of Attributes
 
 Four attributes were corrected:
 
@@ -37,17 +37,17 @@ Four attributes were corrected:
     ▪️ "date" was originally recorded in a string format and was processed to extract the year, creating a new numeric attribute, "year_of_sale."
     
   
-#### 📌 Inconsistency Resolution
+#### 📌 2.2 Inconsistency Resolution
 
     ▪️ "bedrooms" values of 0 were replaced with the mode (3 bedrooms).
     
 
-#### 📌 Creation of the "house_updated" Dataset
+#### 📌 2.3 Creation of the "house_updated" Dataset
 
     ▪️ A new dataset called "house_updated" was created by dropping the "id" attribute, as it lacked meaningful information. The "zipcode" attribute was also removed due to its limited explanatory and predictive power.  Instead, the geographical attributes "lat" (latitude) and "long" (longitude) were retained, as they provided more useful information.
 
 
-#### 📌 Handling Missing Values
+#### 📌 2.4 Handling Missing Values
 
 Missing values were handled through imputation:
 
@@ -56,7 +56,7 @@ Missing values were handled through imputation:
     ▪️ Continuous variables: "price," "sqft_living," "sqft_lot," "sqft_above," "sqft_basement," "lat," "long," "sqft_living15," and "sqft_lot15," were imputed using their median given the skewness of their distributions.
     
 
-#### 📌 Outlier Treatment
+#### 📌 2.5 Outlier Treatment
 
     ▪️ The "sqft_lot" outlier was adjusted by calculating the average ratio between "sqft_lot" and "sqft_lot15" (the average lot size of the 15 nearest neighbors).
     
@@ -68,13 +68,13 @@ Missing values were handled through imputation:
 
 ###  3.0 Exploratory Data Analysis (EDA)
 
-#### 📌 Metadata Inspection
+#### 📌 3.1 Metadata Inspection
 
 ![Screenshot 2024-10-23 175528](https://github.com/user-attachments/assets/d81ad2e1-4174-4173-92ff-7ebda1fedcea)
     
     ▪️ Reviewed the dataset’s structure after data pre-processing, confirming that it now contains 19 variables (after removing irrelevant ones) and that all variables are assigned the correct data types.
 
-#### 📌 Descriptive Statistics
+#### 📌 3.2 Descriptive Statistics
 
 ![Screenshot 2024-10-23 175817](https://github.com/user-attachments/assets/94a1aa6f-533b-4593-8cc5-b0f0335c0a3c)
 
@@ -89,35 +89,35 @@ Missing values were handled through imputation:
     ▪️ Properties were clustered near coordinates (47.56, -122.21), and neighboring homes averaged 1983 sqft of living space with 12,465 sqft lots.
     
 
-#### 📌 Missing Value Check
+#### 📌 3.3 Missing Value Check
 
 ![Screenshot 2024-10-23 180455](https://github.com/user-attachments/assets/43acdeea-f260-429f-bbab-711c720fadf3)
 
     ▪️ Ensured that no missing values remained in the dataset post-imputation and cleaning steps.
 
 
-#### 📌 Univariate Visualizations
+#### 📌 3.4 Univariate Visualizations
 
     ▪️ Created individual bar plots for ordinal and variables. 
     
     ▪️ Findings from the bar plots: Most homes lacked a waterfront view, had not been renovated, and received low view ratings. They were generally in moderate condition (rated 3) with a grade of 7. Most had 3 bedrooms and 2.5 bathrooms.
 
 
-#### 📌 Continuous Variables Visualization
+#### 📌 3.5 Continuous Variables Visualization
 
     ▪️ Plotted histograms for continuous variables. 
     
     ▪️ Findings are: Observations showed that these variables were positively skewed, indicating that high-value houses and large properties were relatively rare. Analysis of latitude and longitude variables revealed clustering of homes within specific geographical bands, possibly indicating denser neighborhoods.
 
 
-#### 📌 Bivariate Relationships
+#### 📌 3.6 Bivariate Relationships
 
     ▪️ Used scatterplots to examine potential relationships between key attributes.  
     
     ▪️ Findings are: Larger homes, more bathrooms, and higher view ratings were positively correlated with higher prices. Newer homes and those in neighborhoods with larger living spaces also tended to have higher prices. Lot size showed a mild positive relationship, while bedroom count had a mixed impact on prices.
 
 
-#### 📌 Correlation Analysis
+#### 📌 3.7 Correlation Analysis
 
     ▪️ Computed correlations for all continuous and ordinal variables.
     
@@ -127,12 +127,12 @@ Missing values were handled through imputation:
 
 ###  4.0 Feature Enginering
 
-#### 📌 Date Extraction
+#### 📌 4.1 Date Extraction
 
    ▪️ Previously mentioned above. 
    
 
-#### 📌 Feature Creation
+#### 📌 4.2 Feature Creation
 
     ▪️ "house_age": Created by subtracting the "yr_built" from the "year_of_sale" to determine the age of each house at the time of sale.
     
@@ -141,7 +141,7 @@ Missing values were handled through imputation:
     ▪️ "lot_utilization": Created by dividing "sqft_living" by "sqft_lot" to measure how much of the available land was used for interior living space.
 
 
-#### 📌 Outlier Detection for Created Features
+#### 📌 4.3 Outlier Detection for Created Features
 
     ▪️ Detect outliers for newly created features namely "house_age", "bed_bath_ratio", and "lot_utilization".
 
@@ -154,7 +154,7 @@ Missing values were handled through imputation:
     ▪️ Displayed the problematic observations and successfully removed them from the dataset. After this, no such observations remained in the dataset.
 
 
-#### 📌 Transformation
+#### 📌 4.4 Transformation
 
     ▪️ Performed logarithmic transformations on skewed continuous variables to normalize their distributions. 
     
@@ -163,12 +163,12 @@ Missing values were handled through imputation:
     ▪️ The transformed variables helped correct the positive skewness present in the raw data, making the features more suitable for predictive modeling.
 
 
-#### 📌 Scaling
+#### 📌 4.5 Scaling
 
     ▪️ Standardized continuous variables namely "lat", "long", "log_bed_bath_ratio", "house_age", "log_sqft_lot", "log_sqft_lot15", "log_sqft_above", "log_sqft_basement", "log_sqft_living", "log_sqft_living15", and "log_lot_ultization" by scaling them to have a mean of 0 and a standard deviation of 1. This ensures that variables are on a comparable scale for modeling.
 
 
-#### 📌 One-Hot Encoding
+#### 📌 4.6 One-Hot Encoding
 
     ▪️ Applied one-hot encoding to categorical variables namely "view" to transform them into binary indicators for each category,  and these were stored in the new dataset, "house_transformed_with_dummies".
 
@@ -180,7 +180,7 @@ Missing values were handled through imputation:
 
     All hypothesis tests were performed with a significance level (α) of 0.05.
 
-#### 📌 Hypothesis 1: House Age and Price
+#### 📌 5.1 Hypothesis 1: House Age and Price
 
     ▪️ Hypothesis: Older houses tend to have lower prices.
     
@@ -189,7 +189,7 @@ Missing values were handled through imputation:
     ▪️ Result: A statistically significant negative relationship was found, indicating that as house age increases, prices tend to decrease.
 
 
-#### 📌 Hypothesis 2: Neighborhood Living Space and Price
+#### 📌 5.2 Hypothesis 2: Neighborhood Living Space and Price
 
     ▪️ Hypothesis: Houses in neighborhoods with larger living spaces tend to have higher prices.
     
@@ -198,7 +198,7 @@ Missing values were handled through imputation:
     ▪️ Result: The analysis revealed a positive correlation, suggesting that homes in neighborhoods with larger houses are priced higher.
 
 
-#### 📌 Hypothesis 3: Bedroom-to-Bathroom Ratio and Price
+#### 📌 5.3 Hypothesis 3: Bedroom-to-Bathroom Ratio and Price
 
     ▪️ Hypothesis: Higher bedroom-to-bathroom ratios result in lower prices.
     
@@ -207,16 +207,7 @@ Missing values were handled through imputation:
     ▪️ Result: A negative relationship was found, indicating that homes with more bedrooms per bathroom tend to have lower prices.
 
 
-#### 📌 Hypothesis 3: Bedroom-to-Bathroom Ratio and Price
-
-    ▪️ Hypothesis: Higher bedroom-to-bathroom ratios result in lower prices.
-    
-    ▪️ Test Method: Linear regression was used to examine the impact of the "bed_bath_ratio" on "price."
-    
-    ▪️ Result: A negative relationship was found, indicating that homes with more bedrooms per bathroom tend to have lower prices.
-
-
-#### 📌 Hypothesis 4: Lot Utilization and Price
+#### 📌 5.4 Hypothesis 4: Lot Utilization and Price
 
     ▪️ Hypothesis: Houses with higher lot utilization (i.e., more interior living space relative to lot size) are priced higher.
     
@@ -225,7 +216,7 @@ Missing values were handled through imputation:
     ▪️ Result: A positive correlation was observed, supporting the hypothesis that homes making better use of their lot space are priced higher.
 
 
-#### 📌 Hypothesis 5: View Rating and Price
+#### 📌 5.5 Hypothesis 5: View Rating and Price
 
     ▪️ Hypothesis: Houses with better view ratings have significantly higher prices.
     
@@ -237,7 +228,7 @@ Missing values were handled through imputation:
 
 ###  6.0 Conclusion
 
-#### 📌 Key Findings
+#### 📌 6.1 Key Findings
 
     ▪️ Confirmed negative relationship between house age and price and positive correlation between neighborhood living space and price.
     
