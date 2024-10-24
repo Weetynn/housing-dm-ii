@@ -180,7 +180,7 @@ Missing values were handled through imputation:
 
     All hypothesis tests were performed with a significance level (α) of 0.05.
 
-#### 📌 5.1 Hypothesis 1: House Age and Price
+#### 📌 5.1 House Age and Price
 
     ▪️ Hypothesis: Older houses tend to have lower prices.
     
@@ -189,7 +189,7 @@ Missing values were handled through imputation:
     ▪️ Result: A statistically significant negative relationship was found, indicating that as house age increases, prices tend to decrease.
 
 
-#### 📌 5.2 Hypothesis 2: Neighborhood Living Space and Price
+#### 📌 5.2 Neighborhood Living Space and Price
 
     ▪️ Hypothesis: Houses in neighborhoods with larger living spaces tend to have higher prices.
     
@@ -198,7 +198,7 @@ Missing values were handled through imputation:
     ▪️ Result: The analysis revealed a positive correlation, suggesting that homes in neighborhoods with larger houses are priced higher.
 
 
-#### 📌 5.3 Hypothesis 3: Bedroom-to-Bathroom Ratio and Price
+#### 📌 5.3 Bedroom-to-Bathroom Ratio and Price
 
     ▪️ Hypothesis: Higher bedroom-to-bathroom ratios result in lower prices.
     
@@ -207,7 +207,7 @@ Missing values were handled through imputation:
     ▪️ Result: A negative relationship was found, indicating that homes with more bedrooms per bathroom tend to have lower prices.
 
 
-#### 📌 5.4 Hypothesis 4: Lot Utilization and Price
+#### 📌 5.4 Lot Utilization and Price
 
     ▪️ Hypothesis: Houses with higher lot utilization (i.e., more interior living space relative to lot size) are priced higher.
     
@@ -216,7 +216,7 @@ Missing values were handled through imputation:
     ▪️ Result: A positive correlation was observed, supporting the hypothesis that homes making better use of their lot space are priced higher.
 
 
-#### 📌 5.5 Hypothesis 5: View Rating and Price
+#### 📌 5.5 View Rating and Price
 
     ▪️ Hypothesis: Houses with better view ratings have significantly higher prices.
     
