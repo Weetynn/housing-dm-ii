@@ -93,7 +93,7 @@ Missing values were handled through imputation:
 
 #### 📌 3.3 Missing Value Check
 
-![Screenshot 2024-10-25 184901](https://github.com/user-attachments/assets/b8d4a9a4-1ed3-48c0-ae8d-8b3b7a9c436d)
+![Screenshot 2024-10-25 185023](https://github.com/user-attachments/assets/bdc3c534-ff45-4886-937b-26521815ea57)
 
     ▪️ Ensured that no missing values remained in the dataset post-imputation and cleaning steps.
 
