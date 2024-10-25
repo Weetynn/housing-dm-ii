@@ -123,7 +123,7 @@ Missing values were handled through imputation:
 
     ▪️ Computed correlations for all continuous and ordinal variables.
     
-    ▪️ Findings are: A strong positive correlation was observed between "price" and "sqft_living" (0.7 or higher). Moderate correlations were found between "price" and other variables like "bathrooms," "view," and "sqft_living15," suggesting that these factors contribute to price but are not as strongly correlated as living space.
+    ▪️ Findings are: A strong positive correlation was observed between "price" and "sqft_living" (0.7 or higher). Moderate correlations were found between "price" and other variables namely "view", "sqft_living15", "sqft_above", "sqft_living", and "grade", suggesting that these factors contribute to price but are not as strongly correlated as living space.
 
 ---
 
